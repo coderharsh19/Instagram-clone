@@ -1,0 +1,21 @@
+@import "../base/variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background: $bodyColor;
+}
+
+button,
+button:hover,
+button:active,
+button:visited {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

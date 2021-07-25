@@ -1,0 +1,63 @@
+.header {
+  height: 75px;
+  background-color: #141414;
+}
+
+.header .container {
+  height: 100%;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .container .h_left {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+.header .container .h_left .logo {
+  height: 75px;
+}
+
+.header .container .h_left ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.header .container .h_left ul li {
+  margin-left: 1.25rem;
+}
+
+.header .container .h_left ul li .link {
+  color: #fff;
+  transition: color 400ms ease;
+}
+
+.header .container .h_left ul li .link:hover {
+  color: #c4c4c4;
+}
+
+.header .container .h_right {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.header .container .h_right span {
+  margin-right: 1.125rem;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.header .container .h_right .icon {
+  font-size: 1.75rem;
+  margin-right: 1.125rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../components/featured/featured.scss"
+    ],
+    "names": [],
+    "file": "featured.css"
+}

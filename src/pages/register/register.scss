@@ -1,0 +1,239 @@
+@import "../../scss/base/variables";
+@import "../../scss/utils/breakpoints";
+
+.register {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .register_header {
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    margin: 0 3.5rem;
+    z-index: 20;
+
+    @include breakpoints-max(lg) {
+      margin: 0 2rem;
+    }
+
+    @include breakpoints-max(sm) {
+      margin: 0 1rem;
+    }
+
+    .header_left {
+      display: flex;
+      align-items: center;
+      z-index: 20;
+
+      img {
+        height: 120px;
+        object-fit: cover;
+
+        @include breakpoints-max(lg) {
+          height: 95px;
+        }
+
+        @include breakpoints-max(sm) {
+          height: 70px;
+        }
+      }
+    }
+
+    .header_right {
+      display: flex;
+      align-items: center;
+      z-index: 20;
+
+      .login_link {
+        padding: 8px 17px;
+        background-color: $secondaryColor;
+        color: $textColor;
+        line-height: auto;
+        font-weight: $regular;
+        font-size: 1.1rem;
+        border-radius: 5px;
+        cursor: pointer;
+
+        @include breakpoints-max(sm) {
+          padding: 4px 10px;
+        }
+      }
+    }
+  }
+
+  .register_content_wrapper {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    margin-top: -90px;
+    padding: 75px 45px;
+
+    @include breakpoints-max(sm) {
+      padding: 25px 10px;
+    }
+
+    .register_bg_wrapper {
+      //   position: relative;
+
+      img {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        z-index: -10;
+        width: 100%;
+      }
+
+      .bg_gradient {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .register_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $textColor;
+      max-width: 950px;
+      height: 100%;
+      width: 100%;
+
+      margin: 0 auto;
+
+      h1 {
+        font-size: 4rem;
+        font-weight: $bold;
+        max-width: 650px;
+        text-align: center;
+
+        @include breakpoints-max(lg) {
+          font-size: 3rem;
+        }
+
+        @include breakpoints-max(sm) {
+          font-size: 2.3rem;
+        }
+      }
+      h2 {
+        font-size: 1.7rem;
+        margin: 1rem auto;
+        text-align: center;
+        @include breakpoints-max(lg) {
+          font-size: 1.5rem;
+        }
+
+        @include breakpoints-max(sm) {
+          font-size: 1.3rem;
+        }
+      }
+
+      .register_form {
+        max-width: 950px;
+        margin-top: 1.5rem;
+        width: 100%;
+
+        h3 {
+          font-size: 1.2rem;
+          font-weight: 400;
+          padding-bottom: 30px;
+          text-align: center;
+
+          @include breakpoints-max(sm) {
+            font-size: 1rem;
+          }
+        }
+
+        .form_input_wrapper {
+          display: flex;
+          align-items: center;
+
+          @include breakpoints-max(lg) {
+            flex-direction: column;
+            gap: 2rem;
+          }
+
+          input {
+            width: 75%;
+            height: 70px;
+            padding: 0 10px;
+            border: 0;
+            outline: 0;
+            font-size: 1.2rem;
+            font-weight: $regular;
+
+            @include breakpoints-max(lg) {
+              width: 90%;
+              margin: 0 auto;
+              height: 60px;
+            }
+
+            @include breakpoints-max(sm) {
+              height: 50px;
+            }
+          }
+
+          button {
+            display: inline-block;
+            padding: 0 1em;
+            min-height: 70px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $textColor;
+            background: $secondaryColor;
+            width: 25%;
+
+            @include breakpoints-max(lg) {
+              width: 90%;
+              margin: 0 auto;
+              min-height: 60px;
+              font-size: 1.3rem;
+            }
+
+            @include breakpoints-max(sm) {
+              width: 90%;
+              margin: 0 auto;
+              min-height: 50px;
+              font-size: 1.1rem;
+            }
+
+            span {
+              font-size: 2rem;
+              display: flex;
+              align-items: center;
+              color: white;
+            }
+          }
+        }
+
+        span {
+          display: block;
+
+          padding: 8px;
+          font-size: 18px;
+          margin-top: 0.5rem;
+
+          color: #ffa00a;
+          @include breakpoints-max(lg) {
+            text-align: center;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
