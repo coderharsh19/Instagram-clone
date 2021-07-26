@@ -13,7 +13,7 @@ const Home = () => {
         <Featured type="" />
         <List
           title="Top-rated Movies"
-          fetchedUrl={requests.topRatedMovie}
+          fetchedUrl={requests.netflixOriginals}
           isPoster
         />
         <List title="Action Movies" fetchedUrl={requests.actionMovies} />
