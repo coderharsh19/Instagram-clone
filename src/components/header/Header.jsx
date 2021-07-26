@@ -39,13 +39,13 @@ const Header = () => {
     <div className={isScrolled ? "header scroll" : "header"}>
       <div className="container">
         <div className="h_left">
-          <Link to="/">
+          <Link to="/browse">
             <img src={logo} alt="logo" className="logo" />
           </Link>
 
           <ul className="p_menu">
             <li className="p_menu_items">
-              <Link className="link" to="/">
+              <Link className="link" to="/browse">
                 Home
               </Link>
             </li>

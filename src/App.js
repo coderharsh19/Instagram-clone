@@ -39,7 +39,12 @@ const App = () => {
     <div className="app">
       <Router>
         <Switch>
-          <ProtectedRoute path="/" exact component={Home} isFetching={false} />
+          <ProtectedRoute
+            path="/browse"
+            exact
+            component={Home}
+            isFetching={false}
+          />
           <ProtectedRoute path="/movies" exact component={Movies} />
           <ProtectedRoute path="/series" exact component={Series} />
           <ProtectedRoute path="/profile" exact component={Profile} />
@@ -52,7 +57,7 @@ const App = () => {
 
           <Route path="/login" exact component={Login} />
 
-          <Route path="/register" exact component={Register} />
+          <Route path="/" exact component={Register} />
 
           {/*!user ? (
             <>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../../images/logo.png";
 
 import { Link, useHistory } from "react-router-dom";
@@ -15,6 +15,13 @@ const Login = () => {
 
   // console.log(user);
 
+  /// Redirect to homepage if user is logged in
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      history.push("/browse");
+    }
+  }, []);
+
   const loginHandler = (e) => {
     e.preventDefault();
 
@@ -26,7 +33,7 @@ const Login = () => {
         setEmail("");
         setPassword("");
         setError(null);
-        history.push("/");
+        history.push("/browse");
       })
       .catch((error) => {
         setPassword("");

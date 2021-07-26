@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./register.scss";
 import logo from "../../images/logo.png";
@@ -16,6 +16,13 @@ const Register = () => {
   const emailHandler = () => {
     setemailDone(true);
   };
+
+  /// Redirect to homepage if user is logged in
+  useEffect(() => {
+    if (localStorage.getItem("user")) {
+      history.push("/browse");
+    }
+  }, []);
 
   /// NEW USER REGISTRATION
   const registrationHandler = async (e) => {

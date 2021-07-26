@@ -22,7 +22,7 @@ const Discover = () => {
     };
 
     genreHandler();
-  }, [id, type, random]);
+  }, []);
   return (
     <>
       <Header />
