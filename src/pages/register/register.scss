@@ -144,11 +144,12 @@
         max-width: 950px;
         margin-top: 1.5rem;
         width: 100%;
+        position: relative;
 
         h3 {
           font-size: 1.2rem;
           font-weight: 400;
-          padding-bottom: 30px;
+          padding-bottom: 15px;
           text-align: center;
 
           @include breakpoints-max(sm) {
