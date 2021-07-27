@@ -2,11 +2,15 @@
 .list {
   margin-top: 40px;
   width: 100%;
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: visible;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @include breakpoints-max(md) {
     margin-top: 0;

@@ -24,13 +24,13 @@ const List = ({ title, fetchedUrl, isPoster }) => {
 
     if (direction === "left" && slideIndex > 0) {
       setSlideIndex(slideIndex - 1);
-      listRef.current.style.transform = `translateX(${680 + distance}px)`;
+      listRef.current.style.transform = `translateX(${340 + distance}px)`;
     }
 
     if (direction === "right" && slideIndex < 5) {
       setSlideIndex(slideIndex + 1);
 
-      listRef.current.style.transform = `translateX( ${-680 + distance}px)`;
+      listRef.current.style.transform = `translateX( ${-340 + distance}px)`;
     }
   };
 
