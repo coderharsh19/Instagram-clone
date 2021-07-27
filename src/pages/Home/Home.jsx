@@ -13,7 +13,7 @@ const Home = () => {
       <div className="home">
         <Featured type="" />
         <List
-          title="Top-rated Movies"
+          title="Top-rated"
           fetchedUrl={requests.netflixOriginals}
           isPoster
         />

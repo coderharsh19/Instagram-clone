@@ -26,7 +26,7 @@ const requests = {
 
   //// TV SERIES
   trendingSeries: `/trending/tv/week?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
-  netflixOriginals: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_networks=213`,
+  netflixOriginals: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&page=${random}&with_networks=213`,
   latestTv: `/tv/latest?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
   topRatedTv: `/tv/top_rated?api_key=${process.env.REACT_APP_API_KEY}&page=${random}&language=en-US`,
   actionTv: `/discover/tv?api_key=${process.env.REACT_APP_API_KEY}&with_genre=10759&language=en-US`,

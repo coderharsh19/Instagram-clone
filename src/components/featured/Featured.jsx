@@ -19,7 +19,7 @@ const Featured = ({ genreList, type }) => {
 
   useEffect(() => {
     let req;
-    let path = window.location.href.split("3000").pop();
+    let path = window.location.href.split("app").pop();
 
     /// SET DIFFFERENT CONTENT FOR DIFFERENT PAGES
     const featuredContentHandler = async () => {

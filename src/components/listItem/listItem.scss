@@ -10,6 +10,7 @@
   cursor: pointer;
   position: relative;
   border-radius: 5px;
+  user-select: none;
   &:hover {
     transform: scale(1.1);
 
