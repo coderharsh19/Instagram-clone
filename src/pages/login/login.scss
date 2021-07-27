@@ -16,6 +16,10 @@
     margin: 0 3.5rem;
     z-index: 20;
 
+    @include breakpoints-max(lg) {
+      margin: 0 10px;
+    }
+
     .header_left {
       display: flex;
       align-items: center;
@@ -24,6 +28,10 @@
       img {
         height: 120px;
         object-fit: cover;
+
+        @include breakpoints-max(md) {
+          height: 60px;
+        }
       }
     }
   }
@@ -72,10 +80,14 @@
       width: 40%;
       margin: 0 auto;
       background-color: rgba(0, 0, 0, 0.75);
-
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
+
+      @include breakpoints-max(sm) {
+        margin-top: 40px;
+        width: 100%;
+      }
 
       .login_form_top {
         display: flex;
@@ -85,14 +97,14 @@
         margin: 0 auto;
         gap: 2rem;
 
-        @include breakpoints-max(md) {
-          width: 95%;
-        }
-
         h1 {
           color: $textColor;
           font-size: 2.3rem;
           width: 100%;
+
+          @include breakpoints-max(md) {
+            font-size: 1.3rem;
+          }
         }
 
         form {
