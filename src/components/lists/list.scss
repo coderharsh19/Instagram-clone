@@ -1,3 +1,4 @@
+@import "../../scss/utils/breakpoints";
 .list {
   margin-top: 40px;
   width: 100%;
@@ -7,10 +8,20 @@
   flex-direction: column;
   justify-content: center;
 
+  @include breakpoints-max(md) {
+    margin-top: 0;
+  }
+
   h3 {
     color: white;
     margin: 0 60px;
     margin-bottom: 15px;
+
+    @include breakpoints-max(sm) {
+      margin: 0 30px;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
   }
 
   .list_container {

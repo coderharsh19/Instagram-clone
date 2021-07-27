@@ -19,6 +19,10 @@
   &.scroll {
     background-color: $primaryColor;
     transition: background-color 500ms ease-in-out;
+
+    @include breakpoints-max(md) {
+      height: 45px;
+    }
   }
 
   .container {
@@ -28,6 +32,10 @@
 
     align-items: center;
     justify-content: space-between;
+
+    @include breakpoints-max(lg) {
+      padding: 0 10px;
+    }
 
     .h_left {
       display: flex;
@@ -40,6 +48,10 @@
 
       .logo {
         height: 70px;
+
+        @include breakpoints-max(lg) {
+          display: none;
+        }
       }
 
       ul {
@@ -65,6 +77,10 @@
             font-weight: $light;
             font-size: rem(17);
 
+            @include breakpoints-max(sm) {
+              font-size: rem(14);
+            }
+
             &:hover {
               color: $hoverColor;
             }
@@ -84,6 +100,11 @@
         text-transform: uppercase;
         font-weight: $regular;
         cursor: pointer;
+
+        @include breakpoints-max(sm) {
+          font-size: 14px;
+          display: none;
+        }
       }
 
       .icon {
@@ -116,9 +137,19 @@
           border-radius: 5px;
           margin-top: 26px;
 
+          @include breakpoints-max(md) {
+            padding: 1rem;
+            right: 0;
+          }
+
+          a {
+            font-size: 14px;
+          }
+
           span {
             text-transform: capitalize;
             margin-right: 0;
+            display: inline-block;
           }
         }
 

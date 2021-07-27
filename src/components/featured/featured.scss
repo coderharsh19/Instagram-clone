@@ -18,11 +18,20 @@
     align-items: center;
     z-index: 11;
 
+    @include breakpoints-max(md) {
+      left: 33px;
+      top: 15%;
+    }
+
     span {
       color: $textColor;
       font-weight: $bold;
       font-size: 2.5rem;
       letter-spacing: 1px;
+
+      @include breakpoints-max(md) {
+        font-size: 1rem;
+      }
     }
 
     .genre {
@@ -35,6 +44,12 @@
       background: black;
       cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 0.9);
+
+      @include breakpoints-max(md) {
+        height: 1.7rem;
+        gap: 0.5rem;
+        margin-left: 20px;
+      }
       &:hover {
         background-color: rgba(0, 0, 0, 0.171);
       }
@@ -42,6 +57,10 @@
       span {
         font-size: 20px;
         font-weight: $semiBold;
+
+        @include breakpoints-max(sm) {
+          font-size: 14px;
+        }
       }
 
       .genre_icon {
@@ -58,9 +77,22 @@
       z-index: 18;
       border: solid 1px rgba(255, 255, 255, 0.15);
 
+      @include breakpoints-max(md) {
+        top: 33px;
+        left: 0;
+      }
+
       ul {
         list-style: none;
         width: 230px;
+
+        @include breakpoints-max(md) {
+          width: 170px;
+        }
+
+        @include breakpoints-max(sm) {
+          width: 150px;
+        }
 
         padding: 1rem;
         li {
@@ -69,6 +101,10 @@
           a {
             font-size: 17px;
             padding: 1px 20px 1px 10px;
+
+            @include breakpoints-max(md) {
+              font-size: 14px;
+            }
 
             &:hover {
               text-decoration: underline;
@@ -86,6 +122,10 @@
     .herobg {
       width: 100%;
       object-fit: cover;
+
+      @include breakpoints-max(lg) {
+        height: 60vh;
+      }
     }
 
     .herobg_vignette {
@@ -119,6 +159,12 @@
 
     z-index: 10;
 
+    @include breakpoints-max(lg) {
+      width: 65%;
+      left: 25px;
+      top: 30%;
+    }
+
     // img {
     //   width: 80%;
     //   object-fit: cover;
@@ -136,10 +182,16 @@
     h3 {
       color: $textColor;
       font-weight: $regular;
-      font-size: 1.2vw;
+      font-size: 22px;
       line-height: 1.8vw;
       user-select: none;
       margin-top: 1rem;
+
+      @include breakpoints-max(lg) {
+        font-size: 14px;
+        line-height: 1.2rem;
+        font-weight: 300;
+      }
     }
 
     .featured_links_wrapper {
@@ -147,7 +199,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-top: 1.1vw;
+      margin-top: 12px;
 
       .btn_primary {
         background: white;
@@ -175,26 +227,33 @@
         align-items: center;
         justify-content: center;
         height: 50px;
-        border-radius: 6px;
+        border-radius: 5px;
         gap: 0.5rem;
 
         @include breakpoints-max(lg) {
-          height: 30px;
-          padding: 1rem;
+          height: 20px;
+          padding: 0.6rem;
         }
 
-        @include breakpoints-max(sm) {
+        @include breakpoints-max(lg) {
         }
 
         .featured_icon {
           font-size: 1.2rem;
           font-weight: $semiBold;
+          @include breakpoints-max(lg) {
+            font-size: 10px;
+          }
         }
 
         span {
           font-size: 1.3vw;
           font-weight: $semiBold;
           letter-spacing: 1px;
+
+          @include breakpoints-max(lg) {
+            font-size: 9px;
+          }
         }
       }
     }
