@@ -23,8 +23,6 @@ const Series = () => {
 
   return (
     <>
-      <Header />
-
       <div className="series">
         <Featured genreList={genreList} type="tv" />
         <List title="On Air Now" fetchedUrl={requests.onAir} />

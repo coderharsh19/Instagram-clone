@@ -25,7 +25,6 @@ const Discover = () => {
   }, []);
   return (
     <>
-      <Header />
       <div className="discover">
         <div className="container">
           <h3>{genre.name}</h3>

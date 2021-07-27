@@ -12,6 +12,7 @@ import { auth } from "./auth/Firebase";
 import ProtectedRoute from "./components/protectedRoutes/ProtectedRoute";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./redux/userSlice";
+import Header from "./components/header/Header";
 
 const App = () => {
   const user = useSelector(selectUser);
@@ -38,6 +39,7 @@ const App = () => {
   return (
     <div className="app">
       <Router>
+        {user ? <Header /> : <></>}
         <Switch>
           <ProtectedRoute
             path="/browse"

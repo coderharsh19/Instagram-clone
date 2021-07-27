@@ -8,7 +8,6 @@ import requests from "../../ApiRequests";
 const Home = () => {
   return (
     <>
-      <Header />
       <div className="home">
         <Featured type="" />
         <List

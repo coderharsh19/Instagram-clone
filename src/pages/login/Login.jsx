@@ -90,8 +90,7 @@ const Login = () => {
           </div>
           <div className="login_form_bottom">
             <div className="signUp_redirect">
-              <span>New to Netflix ?</span>{" "}
-              <Link to="/register">Sign up now</Link>
+              <span>New to Netflix ?</span> <Link to="/">Sign up now</Link>
             </div>
           </div>
         </div>

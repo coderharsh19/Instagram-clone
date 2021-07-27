@@ -23,8 +23,6 @@ const Movies = () => {
 
   return (
     <>
-      <Header />
-
       <div className="movies">
         <Featured genreList={genreList} type="movie" />
         <List
