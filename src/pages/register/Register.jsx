@@ -8,13 +8,18 @@ import { auth } from "../../auth/Firebase";
 
 const Register = () => {
   const history = useHistory();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
   const [error, setError] = useState(null);
   const [emailDone, setemailDone] = useState(false);
 
   const emailHandler = () => {
-    setemailDone(true);
+    if (email) {
+      setemailDone(true);
+    } else {
+      setemailDone(false);
+      setError("Please fill email field");
+    }
   };
 
   /// Redirect to homepage if user is logged in
@@ -70,7 +75,7 @@ const Register = () => {
             {!emailDone ? (
               <div className="form_input_wrapper">
                 <input
-                  type="text"
+                  type="email"
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => {
