@@ -2,15 +2,10 @@
 .list {
   margin-top: 40px;
   width: 100%;
-  overflow-x: scroll;
-  overflow-y: visible;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   @include breakpoints-max(md) {
     margin-top: 0;
@@ -29,8 +24,14 @@
   }
 
   .list_container {
-    position: relative;
     // overflow: hidden;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .list_icon_left {
       color: white;
@@ -43,6 +44,9 @@
       background: rgba(0, 0, 0, 0.6);
       z-index: 20;
       cursor: pointer;
+      @include breakpoints-max(md) {
+        display: none;
+      }
     }
 
     .list_items {
@@ -51,9 +55,7 @@
       position: relative;
       transform: translateX(-30px);
       transition: 400ms ease-in-out;
-
       position: relative;
-
       margin-left: 60px;
     }
 
@@ -69,6 +71,10 @@
       background: rgba(0, 0, 0, 0.6);
       z-index: 20;
       cursor: pointer;
+
+      @include breakpoints-max(md) {
+        display: none;
+      }
     }
   }
 }

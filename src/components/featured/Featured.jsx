@@ -4,21 +4,65 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { RiArrowDownSFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import axios from "../../axios";
+import requests from "../../ApiRequests";
 
 import { truncate } from "../../utils/Truncate.";
-import { featuredContentHandler } from "./FeaturedHandler";
 
 const Featured = ({ genreList, type }) => {
-  const [featuredContent, setFeaturedContent] = useState([]);
   const [showGenre, setShowGenre] = useState(false);
-
-  useEffect(() => {
-    featuredContentHandler(setFeaturedContent);
-  }, []);
+  const [featuredContent, setFeaturedContent] = useState([]);
 
   const genreHandler = () => {
     setShowGenre(!showGenre);
   };
+
+  useEffect(() => {
+    let req;
+    let path = window.location.href.split("3000").pop();
+
+    /// SET DIFFFERENT CONTENT FOR DIFFERENT PAGES
+    const featuredContentHandler = async () => {
+      switch (path) {
+        case "/browse":
+          req = await axios.get(requests.netflixOriginals);
+          setFeaturedContent(
+            req.data.results[
+              Math.floor(Math.random() * req.data.results.length - 1)
+            ]
+          );
+
+          break;
+
+        case "/movies":
+          req = await axios.get(requests.trendingMovies);
+          setFeaturedContent(
+            req.data.results[
+              Math.floor(Math.random() * req.data.results.length - 1)
+            ]
+          );
+
+          break;
+
+        case "/series":
+          req = await axios.get(requests.trendingSeries);
+          setFeaturedContent(
+            req.data.results[
+              Math.floor(Math.random() * req.data.results.length - 1)
+            ]
+          );
+
+          break;
+        default:
+          console.log("No path for that route");
+      }
+      return req;
+    };
+
+    featuredContentHandler();
+  }, []);
+
+  console.log(featuredContent);
 
   return (
     <div className="featured">

@@ -1,6 +1,8 @@
 import Featured from "../../components/featured/Featured";
 import Header from "../../components/header/Header";
 import List from "../../components/lists/List";
+import { useState, useEffect } from "react";
+import axios from "../../axios";
 
 import "./home.scss";
 import requests from "../../ApiRequests";
